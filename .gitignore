@@ -1,0 +1,5 @@
+#vim
+*.swp
+
+# coses que no vull que se vagin actualitzant..
+b

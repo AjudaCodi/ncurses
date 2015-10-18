@@ -1,0 +1,113 @@
+.EQ
+delim $$
+.EN
+\" Vaig pel 8.2 http://invisible-island.net/ncurses/NCURSES-Programming-HOWTO.html
+.TL
+ncurses
+.AU
+primer intent real de fer anar una interfaz amb capes
+.AI
+Sistach Reinoso, Arnau
+
+.NH
+magia
+.LP
+.IP
+stdscr
+.RS
+te alguna relacio amb initscr
+.RE
+.IP
+vwprintw()
+.IP
+sscanf()
+.IP
+wgetstr()
+.IP
+wcanw()
+.IP
+mvwscanw()
+.IP
+vwscanw()
+.NH
+basic
+.LP
+
+.TS
+center;
+l c l.
+initscr()	void	Comen\*,car el mode curse
+endwin()	void	Acaba el mode curse
+_
+getmaxyx(win,y,x)	void	Dona el tamany de la finestra demanada
+getyx()	void	Retorna on se troba el cursor
+move()	void	Mou el cursor
+.TE
+
+.NH
+Configuracio
+.LP
+.TS
+l l.
+raw()	C-Z i C-C. Perts l'event
+cbreak()	C-Z i C-C. Tens l'event normal
+halfdelay(int)	C-Z i C-C. Tens l'event + getch espera t/10 segons approx?
+_
+echo()	Escriu el que entra per teclat
+noecho()	No escriu el que entra per teclat -tot i fer cas-
+_
+keypad(stdscr, TRUE)	ch = `F2' == KEY_F(2)
+keypad(stdscr, FALSE)	F2 = ^[OQ
+.TE
+
+.NH
+Entrada
+.LP
+.TS
+center;
+l l l.
+getch()	char	espera i llegeix el que entri per teclat
+scanw()	?	?
+getstr()	char *	espera a l'enter. Retorna el punter que el genera.
+.TE
+
+.NH
+Sortida
+.LP
+.TS
+l l l.
+addch(char [| attr])	void	Afegeix el caracter demanat
+addstr(str [| attr])	void	Afegeix l'string donat
+printw (str)	void	Mostrar
+refresh()	void	Refrescar la pantalla
+=
+w-txt(win, ...)	`'	Treballa amb la finestra indicada
+mv--txt(y, x, ...)	`'	Se mou a la posicio indicada de la posicio relativa de la finestra
+.TE
+
+.NH
+Atributs
+.LP
+.TS
+center;
+l l l.
+attrset()
+attron()
+attroff()
+=
+A_BOLD		negreta
+A_UNDERLINE		subrallat
+_
+A_NORMAL		Normal display (no highlight)
+A_STANDOUT		Best highlighting mode of the terminal.
+A_UNDERLINE		Underlining
+A_REVERSE		Reverse video
+A_BLINK		Blinking
+A_DIM		Half bright
+A_BOLD		Extra bright or bold
+A_PROTECT		Protected mode
+A_INVIS		Invisible or blank mode
+A_ALTCHARSET		Alternate character set
+A_CHARTEXT		Bit-mask to extract a character
+COLOR_PAIR(n)		Color-pair number n 
+.TE
