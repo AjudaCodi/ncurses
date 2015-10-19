@@ -18,11 +18,11 @@ int main(int argc, char *argv[])
 	width = 10;
 	starty = (LINES - height) / 2;	/* Calculating for a center placement */
 	startx = (COLS - width) / 2;	/* of the window		*/
-	printw("Press F1 to exit");
+	printw("Press F2 to exit");
 	refresh();
 	my_win = create_newwin(height, width, starty, startx);
 
-	while((ch = getch()) != KEY_F(1))
+	while((ch = getch()) != KEY_F(2))
 	{	switch(ch)
 		{	case KEY_LEFT:
 				destroy_win(my_win);

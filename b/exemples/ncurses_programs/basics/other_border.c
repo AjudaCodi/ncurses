@@ -33,12 +33,12 @@ int main(int argc, char *argv[])
 	print_win_params(&win);
 
 	attron(COLOR_PAIR(1));
-	printw("Press F1 to exit");
+	printw("Press F2 to exit");
 	refresh();
-	attroff(COLOR_PAIR(1));
+	//attroff(COLOR_PAIR(1)); // fet per mi muhahaha xD
 	
 	create_box(&win, TRUE);
-	while((ch = getch()) != KEY_F(1))
+	while((ch = getch()) != KEY_F(2))
 	{	switch(ch)
 		{	case KEY_LEFT:
 				create_box(&win, FALSE);

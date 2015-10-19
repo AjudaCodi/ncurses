@@ -65,6 +65,7 @@ int main()
 	mvprintw(23, 0, "You chose choice %d with choice string %s\n", choice, choices[choice - 1]);
 	clrtoeol();
 	refresh();
+	getch();
 	endwin();
 	return 0;
 }
