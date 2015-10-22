@@ -224,3 +224,23 @@ getmouse()
             .    /* Do some thing with the event */
             .
             .
+
+.NH
+Poder tornar
+.LP
+.TS
+center;
+l l l.
+def_prog_mode()		Salva l'estat tty
+system("/bin/sh")		Canviar de sistema 'like bash'
+reset_prog_mode()		Recuperar el que tenies fet fins llavors
+.TE
+
+
+.NH
+Vaig per Panels
+.LP
+Aixo be a ser el famos 16.2
+Ara aixo es aprendre llibreries i coses rares
+
+http://invisible-island.net/ncurses/NCURSES-Programming-HOWTO.html
