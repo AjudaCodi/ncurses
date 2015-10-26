@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include <time.h>
 
+#include <string.h>
+
 #define HSIZE 60
 #define LENGTH 75
 #define WIDTH 10

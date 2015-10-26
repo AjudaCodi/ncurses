@@ -1,5 +1,8 @@
 #include <panel.h>
 
+#include <string.h>
+#include <stdlib.h>
+
 typedef struct _PANEL_DATA {
 	int x, y, w, h;
 	char label[80]; 

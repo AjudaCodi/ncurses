@@ -1,5 +1,8 @@
 #include <curses.h>
 
+#include <stdlib.h>
+#include <time.h>
+
 #define STARTX 9
 #define STARTY 3
 #define WIDTH  6
